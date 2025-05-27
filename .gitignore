@@ -120,6 +120,7 @@ fabric.properties
 
 # Log file
 *.log
+src/logs/
 
 # BlueJ files
 *.ctxt

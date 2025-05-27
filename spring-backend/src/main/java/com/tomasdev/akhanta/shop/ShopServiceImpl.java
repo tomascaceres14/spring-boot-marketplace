@@ -60,10 +60,11 @@ public class ShopServiceImpl implements ShopService {
 
         shopBD = repository.save(shopBD);
 
-        Integer transactionSatus = userRepository.findAndUpdateShopIdById(shopBD.getOwnerId(), shopBD.getId());
+        Integer transaction1 = userRepository.findAndUpdateShopIdById(shopBD.getOwnerId(), shopBD.getId());
+        Integer transaction2 = userRepository.findAndUpdateRoleById(shopBD.getOwnerId(), "OWNER");
 
-        if (transactionSatus == 0) {
-            throw new ServiceException("Actualizar shop de usuario. Estado de transacción: 0");
+        if (transaction1 + transaction2 <= 1) {
+            throw new ServiceException("Error actualizando shop y rol de usuario.");
         }
 
         return shopBD;

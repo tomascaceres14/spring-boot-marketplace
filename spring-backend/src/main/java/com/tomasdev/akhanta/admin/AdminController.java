@@ -60,6 +60,7 @@ public class AdminController {
     }
 
     /* --  SHOPS -- */
+
     @GetMapping("/shops")
     public ResponseEntity<Page<HomeShopDTO>> findAllShops(@RequestParam(required = false, defaultValue = "0") int page,
                                                           @RequestParam(required = false, defaultValue = "10") int size) {
