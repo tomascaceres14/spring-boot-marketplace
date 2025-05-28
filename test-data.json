@@ -1,0 +1,406 @@
+[{
+  "_id": {
+    "$oid": "6681a279245feb99c920b0e6"
+  },
+  "name": "Patio y jardín",
+  "node": "A001"
+},
+{
+  "_id": {
+    "$oid": "6681a279245feb99c920b0e7"
+  },
+  "name": "Comida y bebida",
+  "node": "A002"
+},
+{
+  "_id": {
+    "$oid": "6681a279245feb99c920b0e8"
+  },
+  "name": "Artículos deportivos",
+  "node": "A003"
+},
+{
+  "_id": {
+    "$oid": "6681a279245feb99c920b0e9"
+  },
+  "name": "Productos para mascotas",
+  "node": "A004"
+},
+{
+  "_id": {
+    "$oid": "6681a279245feb99c920b0ea"
+  },
+  "name": "Librería y oficina",
+  "node": "A005"
+},
+{
+  "_id": {
+    "$oid": "6681a279245feb99c920b0eb"
+  },
+  "name": "Instrumentos musicales",
+  "node": "A006"
+},
+{
+  "_id": {
+    "$oid": "6681a279245feb99c920b0ec"
+  },
+  "name": "Arte y manualidades",
+  "node": "A007"
+},
+{
+  "_id": {
+    "$oid": "6681a279245feb99c920b0ed"
+  },
+  "name": "Tecnología",
+  "node": "A008"
+},
+{
+  "_id": {
+    "$oid": "6681a279245feb99c920b0ee"
+  },
+  "name": "Salud y belleza",
+  "node": "A009"
+},
+{
+  "_id": {
+    "$oid": "6681a279245feb99c920b0ef"
+  },
+  "name": "Joyas y relojes",
+  "node": "A010"
+},
+{
+  "_id": {
+    "$oid": "6681a279245feb99c920b0f0"
+  },
+  "name": "Casa y deco",
+  "node": "A011"
+},
+{
+  "_id": {
+    "$oid": "6681a279245feb99c920b0f1"
+  },
+  "name": "Moda",
+  "node": "A012"
+},
+{
+  "_id": {
+    "$oid": "6681a279245feb99c920b0f2"
+  },
+  "name": "Muebles para exteriores",
+  "node": "A001B001"
+},
+{
+  "_id": {
+    "$oid": "6681a27a245feb99c920b0f3"
+  },
+  "name": "Equipo eléctrico de exteriores",
+  "node": "A001B002"
+},
+{
+  "_id": {
+    "$oid": "6681a27a245feb99c920b0f4"
+  },
+  "name": "Plantas, semillas y bulbos",
+  "node": "A001B003"
+},
+{
+  "_id": {
+    "$oid": "6681a27a245feb99c920b0f5"
+  },
+  "name": "Piscinas",
+  "node": "A001B004"
+},
+{
+  "_id": {
+    "$oid": "6681a27a245feb99c920b0f6"
+  },
+  "name": "Decoración de jardines",
+  "node": "A001B005"
+},
+{
+  "_id": {
+    "$oid": "6681a27a245feb99c920b0f7"
+  },
+  "name": "Herramientas de mano",
+  "node": "A001B006"
+},
+{
+  "_id": {
+    "$oid": "6681a27a245feb99c920b0f8"
+  },
+  "name": "Bebida",
+  "node": "A002B007"
+},
+{
+  "_id": {
+    "$oid": "6681a27a245feb99c920b0f9"
+  },
+  "name": "Comida",
+  "node": "A002B008"
+},
+{
+  "_id": {
+    "$oid": "6681a27a245feb99c920b0fa"
+  },
+  "name": "Aire libre",
+  "node": "A003B009"
+},
+{
+  "_id": {
+    "$oid": "6681a27a245feb99c920b0fb"
+  },
+  "name": "Equipamiento deportivo",
+  "node": "A003B010"
+},
+{
+  "_id": {
+    "$oid": "6681a27a245feb99c920b0fc"
+  },
+  "name": "Productos para peces",
+  "node": "A004B011"
+},
+{
+  "_id": {
+    "$oid": "6681a27a245feb99c920b0fd"
+  },
+  "name": "Productos para pájaros",
+  "node": "A004B012"
+},
+{
+  "_id": {
+    "$oid": "6681a27a245feb99c920b0fe"
+  },
+  "name": "Productos para gatos",
+  "node": "A004B013"
+},
+{
+  "_id": {
+    "$oid": "6681a27a245feb99c920b0ff"
+  },
+  "name": "Productos para perros",
+  "node": "A004B014"
+},
+{
+  "_id": {
+    "$oid": "6681a27a245feb99c920b100"
+  },
+  "name": "Engrapadoras y perforadoras",
+  "node": "A005B015"
+},
+{
+  "_id": {
+    "$oid": "6681a27a245feb99c920b101"
+  },
+  "name": "Cintas y adhesivos",
+  "node": "A005B016"
+},
+{
+  "_id": {
+    "$oid": "6681a27a245feb99c920b102"
+  },
+  "name": "Lápices, lapiceras y marcadores",
+  "node": "A005B017"
+},
+{
+  "_id": {
+    "$oid": "6681a27a245feb99c920b103"
+  },
+  "name": "Máquinas y equipamiento de oficina",
+  "node": "A005B018"
+},
+{
+  "_id": {
+    "$oid": "6681a27a245feb99c920b104"
+  },
+  "name": "Bolsos y mochilas",
+  "node": "A005B019"
+},
+{
+  "_id": {
+    "$oid": "6681a27a245feb99c920b105"
+  },
+  "name": "Instrumentos de cuerda",
+  "node": "A006B020"
+},
+{
+  "_id": {
+    "$oid": "6681a27a245feb99c920b106"
+  },
+  "name": "Instrumentos de viento",
+  "node": "A006B021"
+},
+{
+  "_id": {
+    "$oid": "6681a27a245feb99c920b107"
+  },
+  "name": "Instrumentos de percusión",
+  "node": "A006B022"
+},
+{
+  "_id": {
+    "$oid": "6681a27a245feb99c920b108"
+  },
+  "name": "Pianos e instrumentos de teclado",
+  "node": "A006B023"
+},
+{
+  "_id": {
+    "$oid": "6681a27a245feb99c920b109"
+  },
+  "name": "Suministro para manualidades",
+  "node": "A007B024"
+},
+{
+  "_id": {
+    "$oid": "6681a27a245feb99c920b10a"
+  },
+  "name": "Costura e hilado",
+  "node": "A007B025"
+},
+{
+  "_id": {
+    "$oid": "6681a27a245feb99c920b10b"
+  },
+  "name": "Trabajo en piedra y diseño de joyas",
+  "node": "A007B026"
+},
+{
+  "_id": {
+    "$oid": "6681a27a245feb99c920b10c"
+  },
+  "name": "Cerámicas",
+  "node": "A007B027"
+},
+{
+  "_id": {
+    "$oid": "6681a27a245feb99c920b10d"
+  },
+  "name": "Artículos de arte",
+  "node": "A007B028"
+},
+{
+  "_id": {
+    "$oid": "6681a27a245feb99c920b10e"
+  },
+  "name": "Computadoras y tablets",
+  "node": "A008B029"
+},
+{
+  "_id": {
+    "$oid": "6681a27a245feb99c920b10f"
+  },
+  "name": "Consolas y videojuegos",
+  "node": "A008B030"
+},
+{
+  "_id": {
+    "$oid": "6681a27a245feb99c920b110"
+  },
+  "name": "Impresoras y scanners",
+  "node": "A008B031"
+},
+{
+  "_id": {
+    "$oid": "6681a27a245feb99c920b111"
+  },
+  "name": "Televisores y monitores",
+  "node": "A008B032"
+},
+{
+  "_id": {
+    "$oid": "6681a27b245feb99c920b112"
+  },
+  "name": "Celulares y relojes inteligentes",
+  "node": "A008B033"
+},
+{
+  "_id": {
+    "$oid": "6681a27b245feb99c920b113"
+  },
+  "name": "Accesorios y periféricos",
+  "node": "A008B034"
+},
+{
+  "_id": {
+    "$oid": "6681a27b245feb99c920b114"
+  },
+  "name": "Salud",
+  "node": "A009B035"
+},
+{
+  "_id": {
+    "$oid": "6681a27b245feb99c920b115"
+  },
+  "name": "Belleza",
+  "node": "A009B036"
+},
+{
+  "_id": {
+    "$oid": "6681a27b245feb99c920b116"
+  },
+  "name": "Joyas",
+  "node": "A010B037"
+},
+{
+  "_id": {
+    "$oid": "6681a27b245feb99c920b117"
+  },
+  "name": "Relojes",
+  "node": "A010B038"
+},
+{
+  "_id": {
+    "$oid": "6681a27b245feb99c920b118"
+  },
+  "name": "Productos de limpieza",
+  "node": "A011B039"
+},
+{
+  "_id": {
+    "$oid": "6681a27b245feb99c920b119"
+  },
+  "name": "Artículos para el hogar",
+  "node": "A011B040"
+},
+{
+  "_id": {
+    "$oid": "6681a27b245feb99c920b11a"
+  },
+  "name": "Muebles",
+  "node": "A011B041"
+},
+{
+  "_id": {
+    "$oid": "6681a27b245feb99c920b11b"
+  },
+  "name": "Ropa de cama",
+  "node": "A011B042"
+},
+{
+  "_id": {
+    "$oid": "6681a27b245feb99c920b11c"
+  },
+  "name": "Electrodomésticos",
+  "node": "A011B043"
+},
+{
+  "_id": {
+    "$oid": "6681a27b245feb99c920b11d"
+  },
+  "name": "Zapatos y calzado",
+  "node": "A011B044"
+},
+{
+  "_id": {
+    "$oid": "6681a27b245feb99c920b11e"
+  },
+  "name": "Accesorios",
+  "node": "A011B045"
+},
+{
+  "_id": {
+    "$oid": "6681a27b245feb99c920b11f"
+  },
+  "name": "Ropa",
+  "node": "A011B046"
+}]

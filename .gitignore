@@ -119,7 +119,7 @@ fabric.properties
 *.class
 
 # Log file
-*.log
+spring-backend/src/logs/*
 src/logs/
 
 # BlueJ files
