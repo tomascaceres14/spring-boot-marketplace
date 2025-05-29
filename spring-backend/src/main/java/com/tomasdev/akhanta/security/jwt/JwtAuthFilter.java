@@ -12,6 +12,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.filter.OncePerRequestFilter;
 import org.springframework.web.servlet.HandlerExceptionResolver;
+import org.springframework.web.servlet.HandlerMapping;
 
 import java.io.IOException;
 import java.util.List;
@@ -22,8 +23,6 @@ public class JwtAuthFilter extends OncePerRequestFilter {
 
     private final JwtService jwtService;
     private final HandlerExceptionResolver resolver;
-    private final List<String> urlsToSkip = List.of("/api/v1/auth", "/api/v1/home", "/favicon.ico", "/h2-console", "/test");
-
     public JwtAuthFilter(JwtService jwtService, @Qualifier("handlerExceptionResolver") HandlerExceptionResolver resolver) {
         this.jwtService = jwtService;
         this.resolver = resolver;
@@ -31,21 +30,28 @@ public class JwtAuthFilter extends OncePerRequestFilter {
 
     @Override
     protected boolean shouldNotFilter(HttpServletRequest request) {
-        if (request.getRequestURI().equals("/")) return true;
-        return urlsToSkip.stream().anyMatch(url -> request.getRequestURI().contains(url));
+
+        // No filtrar si la ruta no existe
+        return request.getAttribute(HandlerMapping.BEST_MATCHING_PATTERN_ATTRIBUTE) == null;
     }
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws ServletException, IOException, UnauthorizedException {
-
         Authentication auth;
         String jwt = request.getHeader(HttpHeaders.AUTHORIZATION);
 
-        if (jwt == null || JwtService.extractClaim(jwt, "isRefresh").equals("true")) {
-            resolver.resolveException(request, response, null, new UnauthorizedException("Cabecera no válida. Inicie sesión e intente nuevamente."));
+        if (jwt == null) {
+            filterChain.doFilter(request, response);
             return;
         }
+
+        if (!jwt.startsWith("Bearer ")) {
+            resolver.resolveException(request, response, null, new UnauthorizedException("Formato de token inválido."));
+            return;
+        }
+
+        jwt = jwt.substring(7);
 
         try {
             auth = jwtService.authorizeToken(jwt);

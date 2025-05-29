@@ -42,13 +42,14 @@ public class WebSecurityConfig {
                 .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class)
                 .authorizeHttpRequests(requests ->
                         requests
-                                .requestMatchers("/test/**", "/api/v1/auth/**", "/api/v1/home/**", "/h2-console/**").permitAll()
+                                .requestMatchers("/test/**", "/api/v1/auth/**", "/api/v1/home/**",
+                                                "/h2-console/**", "/", "/swagger-ui/**", "/v3/api-docs/**").permitAll()
                                 .requestMatchers("/api/v1/admin/**").hasRole(Roles.ADMIN)
                                 .requestMatchers("/api/v1/users/**").hasAnyRole(Roles.ADMIN, Roles.USER)
                                 .requestMatchers("/api/v1/customers/**").hasAnyRole(Roles.ADMIN, Roles.USER)
                                 .requestMatchers("/api/v1/orders/**").hasAnyRole(Roles.ADMIN, Roles.USER)
                                 .requestMatchers("/api/v1/shops/**").hasAnyRole(Roles.ADMIN, Roles.OWNER)
-                                .anyRequest().authenticated()
+                                .anyRequest().permitAll()
                 )
                 .headers(headers -> headers.frameOptions(HeadersConfigurer.FrameOptionsConfig::sameOrigin));
 
