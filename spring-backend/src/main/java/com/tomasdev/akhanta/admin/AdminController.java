@@ -11,6 +11,8 @@ import com.tomasdev.akhanta.product.categories.CategoryService;
 import com.tomasdev.akhanta.users.User;
 import com.tomasdev.akhanta.users.UserService;
 import com.tomasdev.akhanta.shop.ShopService;
+import io.swagger.v3.oas.annotations.Hidden;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
@@ -21,9 +23,11 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Slf4j
+@Hidden
 @RestController
 @AllArgsConstructor
 @RequestMapping("/api/v1/admin")
+//@SecurityRequirement(name = "Admin Auth")
 public class AdminController {
 
     private final CategoryService categoryService;

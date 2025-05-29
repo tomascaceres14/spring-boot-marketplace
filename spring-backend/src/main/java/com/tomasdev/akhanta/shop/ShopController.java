@@ -6,6 +6,7 @@ import com.tomasdev.akhanta.orders.ShopOrderService;
 import com.tomasdev.akhanta.product.CreateProductDTO;
 import com.tomasdev.akhanta.product.Product;
 import com.tomasdev.akhanta.product.ProductService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -21,6 +22,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1/shops")
 @RequiredArgsConstructor
+@SecurityRequirement(name = "User Auth")
 public class ShopController {
 
     private final ShopService service;
