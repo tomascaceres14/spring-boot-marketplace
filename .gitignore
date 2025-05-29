@@ -119,8 +119,8 @@ fabric.properties
 *.class
 
 # Log file
-spring-backend/src/logs/*
-src/logs/
+/*.log
+*.gz
 
 # BlueJ files
 *.ctxt
