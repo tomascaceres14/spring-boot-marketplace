@@ -41,6 +41,7 @@ public class JwtAuthFilter extends OncePerRequestFilter {
         Authentication auth;
         String jwt = request.getHeader(HttpHeaders.AUTHORIZATION);
 
+        // Si no hay jwt, dejamos pasar para validar endpoints publicos
         if (jwt == null) {
             filterChain.doFilter(request, response);
             return;

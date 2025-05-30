@@ -72,7 +72,7 @@ public class JwtService {
         log.info("Authorizing token {}", jwt);
 
         // valida firma y expiración
-        JWT.require(Algorithm.HMAC256(secretKey)).build().verify(jwt.substring(7));
+        JWT.require(Algorithm.HMAC256(secretKey)).build().verify(jwt);
 
         if (blacklistRepository.existsByToken(jwt)) {
             throw new UnauthorizedException("Token expirado/revocado.");

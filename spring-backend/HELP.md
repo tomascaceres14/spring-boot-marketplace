@@ -1,3 +1,0 @@
-TO-DO:
-- Documentation...
-- Add implementation for disk image storage
