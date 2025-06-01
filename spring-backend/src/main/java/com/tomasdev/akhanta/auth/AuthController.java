@@ -2,7 +2,7 @@ package com.tomasdev.akhanta.auth;
 
 import com.tomasdev.akhanta.auth.dto.LogInCredentialsDTO;
 import com.tomasdev.akhanta.security.jwt.JwtResponseDTO;
-import com.tomasdev.akhanta.auth.dto.CustomerRegisterDTO;
+import com.tomasdev.akhanta.auth.dto.UserRegisterDTO;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpHeaders;
@@ -18,7 +18,7 @@ public class AuthController {
     private final AuthService service;
 
     @PostMapping("/register")
-    public ResponseEntity<JwtResponseDTO> registerUser(@RequestBody CustomerRegisterDTO userDTO) {
+    public ResponseEntity<JwtResponseDTO> registerUser(@RequestBody UserRegisterDTO userDTO) {
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body(service.registerUser(userDTO));
     }

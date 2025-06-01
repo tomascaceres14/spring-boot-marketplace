@@ -4,7 +4,7 @@ import com.tomasdev.akhanta.auth.dto.LogInCredentialsDTO;
 import com.tomasdev.akhanta.exceptions.WrongCredentialsException;
 import com.tomasdev.akhanta.security.jwt.JwtResponseDTO;
 import com.tomasdev.akhanta.security.jwt.JwtService;
-import com.tomasdev.akhanta.auth.dto.CustomerRegisterDTO;
+import com.tomasdev.akhanta.auth.dto.UserRegisterDTO;
 import com.tomasdev.akhanta.users.User;
 import com.tomasdev.akhanta.users.UserRepository;
 import com.tomasdev.akhanta.users.UserService;
@@ -21,7 +21,7 @@ public class AuthServiceImpl implements AuthService {
     private final JwtService jwtService;
     private final PasswordEncoder passwordEncoder;
 
-    public JwtResponseDTO registerUser(CustomerRegisterDTO customerDTO) {
+    public JwtResponseDTO registerUser(UserRegisterDTO customerDTO) {
         User user = userService.register(customerDTO);
         return jwtService.grantAccess(user);
     }

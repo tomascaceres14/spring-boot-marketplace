@@ -1,7 +1,7 @@
 package com.tomasdev.akhanta.users;
 
 import com.tomasdev.akhanta.auth.dto.PasswordChangeDTO;
-import com.tomasdev.akhanta.auth.dto.CustomerRegisterDTO;
+import com.tomasdev.akhanta.auth.dto.UserRegisterDTO;
 import com.tomasdev.akhanta.cart.CartService;
 import com.tomasdev.akhanta.exceptions.ResourceNotFoundException;
 import com.tomasdev.akhanta.exceptions.WrongCredentialsException;
@@ -26,7 +26,7 @@ public class UserServiceImpl implements UserService {
     private final PasswordEncoder passwordEncoder;
 
     @Override
-    public User register(CustomerRegisterDTO customerDTO) {
+    public User register(UserRegisterDTO customerDTO) {
 
         if (!customerDTO.getEmail().matches("^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@"
                 + "[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$")) {

@@ -2,11 +2,11 @@ package com.tomasdev.akhanta.auth;
 
 import com.tomasdev.akhanta.auth.dto.LogInCredentialsDTO;
 import com.tomasdev.akhanta.security.jwt.JwtResponseDTO;
-import com.tomasdev.akhanta.auth.dto.CustomerRegisterDTO;
+import com.tomasdev.akhanta.auth.dto.UserRegisterDTO;
 
 public interface AuthService {
 
-    JwtResponseDTO registerUser(CustomerRegisterDTO customerDTO);
+    JwtResponseDTO registerUser(UserRegisterDTO customerDTO);
 
     JwtResponseDTO logIn(LogInCredentialsDTO credentials);
 
