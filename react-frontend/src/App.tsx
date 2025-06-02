@@ -3,6 +3,8 @@ import {
   QueryClientProvider,
   useQuery,
 } from "@tanstack/react-query";
+import Header from "./components/Header";
+import HomePage from "./HomePage";
 
 const queryClient = new QueryClient();
 
@@ -30,18 +32,9 @@ function Example() {
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <header>
-        <nav>
-          <ul>
-            <li>Home</li>
-            <li>Products</li>
-            <input type="string" placeholder="Search..." />
-            <li>Home</li>
-            <li>Account</li>
-          </ul>
-        </nav>
-      </header>
-      <Example />
+      {/* <Header />
+      <Example /> */}
+      <HomePage />
     </QueryClientProvider>
   );
 }
