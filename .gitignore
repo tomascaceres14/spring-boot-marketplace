@@ -180,3 +180,5 @@ build/
 
 ### Node Modules ###
 node_modules/
+nextjs-frontend/node_modules/
+nextjs-frontend/.next/
