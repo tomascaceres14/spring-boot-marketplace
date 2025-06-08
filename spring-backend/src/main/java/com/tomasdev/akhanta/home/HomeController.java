@@ -5,6 +5,8 @@ import com.tomasdev.akhanta.product.Product;
 import com.tomasdev.akhanta.product.ProductService;
 import com.tomasdev.akhanta.product.categories.Category;
 import com.tomasdev.akhanta.product.categories.CategoryService;
+import com.tomasdev.akhanta.professional.Professional;
+import com.tomasdev.akhanta.professional.ProfessionalService;
 import com.tomasdev.akhanta.shop.ShopService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
@@ -20,9 +22,10 @@ import java.util.List;
 @AllArgsConstructor
 public class HomeController {
 
-    private ProductService productService;
+    private final ProductService productService;
     private final ShopService shopService;
-    private CategoryService categoryService;
+    private final CategoryService categoryService;
+    private final ProfessionalService professionalService;
 
     @GetMapping("/products")
     public ResponseEntity<Page<Product>> findAllProducts(@RequestParam(required = false, defaultValue = "0") Integer page,
@@ -53,6 +56,11 @@ public class HomeController {
     @GetMapping("/shops/{seName}")
     public ResponseEntity<HomeShopDTO> findShopBySeName(@PathVariable String seName) {
         return ResponseEntity.ok(shopService.findBySeName(seName));
+    }
+
+    @GetMapping("/professionals")
+    public ResponseEntity<Page<Professional>> findAllProfessionals(int size, int page) {
+        return ResponseEntity.ok(professionalService.findAllProfessionals(size, page));
     }
 
     @GetMapping("/categories")

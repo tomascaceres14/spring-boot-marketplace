@@ -7,10 +7,10 @@ import java.util.List;
 
 public interface ProductService {
 
+    Product findProductById(String id);
     Page<Product> findAllProducts(int page, int size);
     Product saveProduct(CreateProductDTO productDTO, List<MultipartFile> images, String shopId);
     Product updateProductById(String id, CreateProductDTO product);
-    Product findProductById(String id);
     Page<Product> filterProducts(String name, String categoryId,  int page, int size);
     String deleteProductById(String id);
     void removeStockById(String productId, Integer quantity);

@@ -45,10 +45,10 @@ public class WebSecurityConfig {
                                 .requestMatchers("/test/**", "/api/v1/auth/**", "/api/v1/home/**",
                                                 "/h2-console/**", "/", "/swagger-ui/**", "/v3/api-docs/**").permitAll()
                                 .requestMatchers("/api/v1/admin/**").hasRole(Roles.ADMIN)
-                                .requestMatchers("/api/v1/users/**").hasAnyRole(Roles.ADMIN, Roles.USER)
-                                .requestMatchers("/api/v1/customers/**").hasAnyRole(Roles.ADMIN, Roles.USER)
-                                .requestMatchers("/api/v1/orders/**").hasAnyRole(Roles.ADMIN, Roles.USER)
-                                .requestMatchers("/api/v1/shops/**").hasAnyRole(Roles.ADMIN, Roles.OWNER)
+                                .requestMatchers("/api/v1/users/**",
+                                        "/api/v1/customers/**").hasAnyRole(Roles.ADMIN, Roles.USER)
+                                .requestMatchers("/api/v1/shops/**",
+                                        "/api/v1/professionals/**").hasAnyRole(Roles.USER, Roles.OWNER)
                                 .anyRequest().permitAll()
                 )
                 .headers(headers -> headers.frameOptions(HeadersConfigurer.FrameOptionsConfig::sameOrigin));

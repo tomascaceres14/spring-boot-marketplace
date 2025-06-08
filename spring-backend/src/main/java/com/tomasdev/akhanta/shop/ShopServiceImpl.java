@@ -53,10 +53,16 @@ public class ShopServiceImpl implements ShopService {
     }
 
     @Override
-    public Shop saveShop(ShopRegisterDTO shop) {
+    public Shop saveShop(ShopRegisterDTO registerDTO, String ownerId) {
 
-        Shop shopBD = mapper.map(shop, Shop.class);
+        if (ownerId == null) {
+            throw new ServiceException("Missing user id for shop creation.");
+        }
+
+        Shop shopBD = mapper.map(registerDTO, Shop.class);
+
         shopBD.setSeName(StringUtils.normalizeToSearch(shopBD.getName()));
+        shopBD.setOwnerId(ownerId);
 
         shopBD = repository.save(shopBD);
 

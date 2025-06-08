@@ -46,25 +46,25 @@ public class UserController {
         return ResponseEntity.status(org.springframework.http.HttpStatus.CREATED).body(orderService.createOrder(jwt));
     }
 
-    @GetMapping
+    @GetMapping("/cart")
     public ResponseEntity<Cart> findCartById(@RequestHeader(name = HttpHeaders.AUTHORIZATION) String jwt) {
         return ResponseEntity.ok(cartService.findCartById(jwt));
     }
 
-    @PostMapping
+    @PostMapping("/cart")
     public ResponseEntity<?> addItemToCart(@RequestBody CartItemDTO cartItem,
                                            @RequestHeader(name = HttpHeaders.AUTHORIZATION) String jwt) {
         cartService.addItemToCart(cartItem, jwt);
         return ResponseEntity.status(HttpStatus.SC_OK).build();
     }
 
-    @DeleteMapping
+    @DeleteMapping("/cart")
     public ResponseEntity<?> clearCart(@RequestHeader(name = HttpHeaders.AUTHORIZATION) String jwt) {
         cartService.clearCart(jwt);
         return ResponseEntity.status(HttpStatus.SC_OK).build();
     }
 
-    @DeleteMapping("/{productId}")
+    @DeleteMapping("/cart/{productId}")
     public ResponseEntity<?> removeItemFromCart(@PathVariable String productId,
                                                 @RequestParam(defaultValue = "false") boolean unit,
                                                 @RequestHeader(name = HttpHeaders.AUTHORIZATION) String jwt) {

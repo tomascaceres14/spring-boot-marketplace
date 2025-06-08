@@ -7,6 +7,6 @@ import org.springframework.data.domain.Page;
 public interface ShopService {
     HomeShopDTO findBySeName(String name);
     Page<HomeShopDTO> findAllShops(int page, int size);
-    Shop saveShop(ShopRegisterDTO shop);
+    Shop saveShop(ShopRegisterDTO shop, String userId);
     void addProductById(String id, String productId);
 }

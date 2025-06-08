@@ -15,6 +15,4 @@ public class ShopRegisterDTO {
     private String tertiaryColor;
     private String profileImageUrl;
     private String bannerImageUrl;
-    @NotBlank(message = "Missing owner id.")
-    private String ownerId;
 }

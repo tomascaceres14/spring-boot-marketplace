@@ -6,6 +6,7 @@ import com.tomasdev.akhanta.orders.ShopOrderService;
 import com.tomasdev.akhanta.product.CreateProductDTO;
 import com.tomasdev.akhanta.product.Product;
 import com.tomasdev.akhanta.product.ProductService;
+import com.tomasdev.akhanta.security.jwt.JwtService;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -30,8 +31,10 @@ public class ShopController {
     private final ShopOrderService orderService;
 
     @PostMapping
-    public ResponseEntity<Shop> saveShop(@RequestBody ShopRegisterDTO shopDTO) {
-        return ResponseEntity.ok(service.saveShop(shopDTO));
+    public ResponseEntity<Shop> saveShop(@RequestBody ShopRegisterDTO shopDTO,
+                                         @RequestHeader(name = HttpHeaders.AUTHORIZATION) String jwt) {
+        String userId = JwtService.extractClaim(jwt, "userId");
+        return ResponseEntity.ok(service.saveShop(shopDTO, userId));
     }
 
     @PostMapping("/products")

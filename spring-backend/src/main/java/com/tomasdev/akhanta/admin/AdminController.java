@@ -27,7 +27,6 @@ import java.util.List;
 @RestController
 @AllArgsConstructor
 @RequestMapping("/api/v1/admin")
-//@SecurityRequirement(name = "Admin Auth")
 public class AdminController {
 
     private final CategoryService categoryService;
